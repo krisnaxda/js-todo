@@ -31,7 +31,7 @@
             </table>
         </div>
     </div>
-
+    <button type="button" onmouseover="nightMode()" class="addBtn" value="Tambah">Night Mode</button>
     
 <script>
 
@@ -115,6 +115,11 @@
     }
     
     showTodo();
+
+    function nightMode(){
+    document.body.style.backgroundColor = "#111111";
+    document.querySelector("div[class=main]").style.backgroundColor = '#111111';
+    }
 
 </script> 
 
