@@ -1,8 +1,13 @@
- var doList = [
-        'Coding',
-        'Charging Switch',
-        'Take The Trashcan'
-        ];
+var doList = [
+    'Complete the project report',
+    'Attend team meeting at 10 AM',
+    'Review code for the new feature',
+    'Buy groceries: milk, bread, eggs',
+    'Schedule a dentist appointment',
+    'Read 50 pages of the new book',
+    'Work out for at least 30 minutes',
+    'Plan weekend trip itinerary'
+];
 
     mobil = {type:'honda', color: 'red', };
     console.log(mobil.type);
@@ -20,8 +25,7 @@
             const list = "<tr><td onclick='checked(this)'>" + doList[i] + " </td><td id='delete'>" + btnDelete + "</td></tr>";
     
             todo.innerHTML += list;
-        
-            console.log(todo.innerHTML);
+    
             
         }
 
@@ -76,10 +80,22 @@
         showTodo();
 
     }
+
+    function nightMode(){    
+        const element = document.body;
+        const main = document.getElementById('containerMain');
+        const slider = document.getElementById('toggle');
+        element.classList.toggle("darkMode");
+        main.classList.toggle("mainDark");
+        console.log(slider);
+        console.log(main);
+        slider.classList.toggle("toggleDark");
+    }
+
+    const toggleNight = document.querySelector('.toggle-state');
+
+    //add event listener
+    toggleNight.addEventListener("change", nightMode, false);
     
     showTodo();
 
-    function nightMode(){
-    document.body.style.backgroundColor = "#111111";
-    document.querySelector("div[class=main]").style.backgroundColor = '#111111';
-    }

@@ -1,21 +1,37 @@
 body {
     background-color: #f5f5f5;
     height: 100%;
+    color: black;
 }
+.darkMode {
+    background-color: #302f2f;
+    color: #f5f5f5;
+}
+
+
+
 
 * {
     box-sizing: border-box;
   }
 
 .main {
+    position: relative;
     border-radius: 4px;
     width: 50%;
+    padding-bottom: 20px;
     height: max-content;
     min-height: 800px;
     margin: 0 auto;
     background-color: #fcfcfc;
     margin-top: 30px;
     box-shadow: 0px 2px 2px #ccc;
+    
+}
+
+.mainDark {
+    background-color: #302f2f;
+    box-shadow: 0px 2px 2px #b166f748;
     
 }
 
@@ -33,6 +49,10 @@ body {
     padding: 10px;
 }
 
+a {
+    color: #b166f7;
+}
+
 .box {
 
     justify-content: center;
@@ -46,6 +66,7 @@ body {
     width: 70%;
     margin-top: 20px;
     margin: 0 auto;
+    margin-bottom: 60px;
 }
 
 table {
@@ -130,9 +151,9 @@ a {
     padding: 10px;
     width: 15%;
     background: #8EC5FC;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
     transition: 0.3s;
     border: none;
@@ -153,4 +174,65 @@ a {
     border: none;
     outline: none;
     box-shadow: 0px 0px 3px #00000061;
+  }
+
+
+  .label {
+    align-items: center;
+    cursor: pointer;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+  
+  .toggle {
+    position: relative;
+    height: 30px;
+    width: 60px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow:
+      -8px -4px 8px 0px #ffffff,
+      8px 4px 12px 0px #d1d9e6,
+      4px 4px 4px 0px #d1d9e6 inset,
+      -4px -4px 4px 0px #ffffff inset;
+  }
+  
+  .toggle-state {
+    display: none;
+  }
+  
+    input[type=checkbox]:checked ~ .indicator {
+    background: rgb(12, 12, 12);
+     }
+  
+  .indicator {
+    height: 100%;
+    width: 200%;
+    background: #ecf0f3;
+    border-radius: 15px;
+    transform: translate3d(-75%, 0, 0);
+    transition: transform 0.3s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+    box-shadow:
+      -8px 0px 8px 0px #ee1aee48
+  }
+  
+  .toggle-state:checked ~ .indicator {
+    transform: translate3d(25%, 0, 0);
+
+  }
+
+  .toggleDark {
+    position: relative;
+    height: 30px;
+    width: 60px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow:
+      0px -1px 1px 0px #ee1aee48,
+      2px 4px 12px 0px #ee1aee48,
+      4px 4px 4px 0px #ee1aee48 inset,
+      -4px -4px 4px 0px #ee1aee48 inset;
   }

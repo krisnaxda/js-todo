@@ -8,7 +8,7 @@
 
 </head>
 <body>
-    <div class="main">
+    <div class="main" id="containerMain">
         <div class="topContent">
             <div class="title">
                 <h1>To Do List</h1>
@@ -16,7 +16,7 @@
             </div>
             
         </div>
-        <div class="box">
+        <div class="box"> 
             <div class="inBox">
                 <input type="text" id="inputDo" class="inputDo" name="toDo" placeholder="Isi disini..">
                 <button type="button" onclick="addList()" class="addBtn" value="Tambah">Tambah</button>
@@ -30,9 +30,13 @@
                 </tbody>
             </table>
         </div>
+        <label class="label">
+            <div class="toggle" id="toggle">
+              <input class="toggle-state" type="checkbox" name="check" value="check" />
+              <div class="indicator"></div>
+            </div>
+          </label>   
     </div>
-    <button type="button" onmouseover="nightMode()" class="addBtn" value="Tambah">Night Mode</button>
-    
 <script src="min.js"></script> 
 
 </body>
